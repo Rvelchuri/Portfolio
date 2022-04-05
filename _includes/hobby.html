@@ -1,0 +1,37 @@
+{% if  page.hobby  %}
+
+
+<section class="section">
+  <div class="container">
+    <div class="row">
+      <div class="col-12 text-left">
+        <h2 class="section-title">Hobby and Interset</h2>
+      </div>
+
+      {% for items in  page.hobbies %}
+           
+
+            <div class="col-lg-4 col-sm-6 mb-4 mb-lg-3 hobby">
+                <article class="card shadow p-0 h-100">
+                  <div class="card-header p-0">
+                    <img class="rounded card-img-top px-0" src="{{items.image | relative_url }}" alt="post-thumb">
+                  </div>
+                  
+                  <div class="card-body">
+                    <h4 class="card-title"> {{items.title}}
+                    </h4>
+                    <p class="cars-text"> {{items.text}}</p>
+                    <!-- <a href="blog-single.html" class="btn btn-xs btn-primary">Read More</a> -->
+                  </div>
+                </article>
+              </div>
+
+      {% endfor %}
+
+
+
+    </div>
+  </div>
+</section>
+
+{% endif %}
